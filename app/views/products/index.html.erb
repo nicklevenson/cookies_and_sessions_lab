@@ -1,0 +1,10 @@
+<%=form_for :product, url: "/", method: :post do |f|%>
+  <input type="text" id="product" name="product">
+  <%=f.submit "add to cart"%>
+  <%if @items%>
+  <%@items.each do |item|%>
+    <%=item%>
+  <%end%>
+<%end%>
+<%end%>
+
